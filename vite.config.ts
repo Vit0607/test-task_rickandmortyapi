@@ -4,6 +4,7 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/test-task_rickandmortyapi/',
   plugins: [react(), svgr({
       svgrOptions: {
         icon: true
