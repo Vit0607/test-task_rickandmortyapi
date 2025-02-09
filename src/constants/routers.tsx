@@ -5,25 +5,30 @@ import FavoritesPage from 'pages/FavoritesPage/FavoritesPage';
 import { createBrowserRouter } from 'react-router';
 import { LINKS } from 'types/enums';
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: LINKS.Home,
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />
+        },
+        {
+          path: LINKS.Character,
+          element: <CharacterDetails />
+        },
+        {
+          path: LINKS.Favorites,
+          element: <FavoritesPage />
+        }
+      ]
+    }
+  ],
   {
-    path: LINKS.Home,
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      {
-        path: LINKS.Character,
-        element: <CharacterDetails />
-      },
-      {
-        path: LINKS.Favorites,
-        element: <FavoritesPage />
-      }
-    ]
+    basename: '/test-task_rickandmortyapi/'
   }
-]);
+);
 
 export default router;
