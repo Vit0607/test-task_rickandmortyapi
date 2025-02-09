@@ -9,9 +9,6 @@ const CharacterDetails = () => {
 
   const character = data;
 
-  console.log('data: ', data);
-  console.log('character: ', data);
-
   if (isLoading) return <h2 className={styles.loader}>Загрузка...</h2>;
   if (error)
     return <h2 className={styles.error}>Ошибка при загружке персонажа!</h2>;

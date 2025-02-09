@@ -15,9 +15,6 @@ const FavoritesLink = () => {
     setFavoritesCount(count);
   }, [favoritesItems]);
 
-  console.log(`favoritesItems: ${favoritesItems}`);
-  console.log(`favoritesCount: ${favoritesCount}`);
-
   return (
     <Link to={'/favorites'} className={styles['favorites-link']}>
       <span

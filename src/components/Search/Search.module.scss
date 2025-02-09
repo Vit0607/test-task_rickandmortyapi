@@ -1,4 +1,19 @@
+@use 'styles/helpers.scss' as helpers;
+
 .search {
   margin-bottom: rem(40);
+  font-size: var(--size-base);
   padding: rem(6);
+}
+
+@media (max-width: helpers.map-get(helpers.$screens, 'tablet')) {
+  .search {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: helpers.map-get(helpers.$screens, 'mobile')) {
+  .search {
+    font-size: 1.5rem;
+  }
 }
